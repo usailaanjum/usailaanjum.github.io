@@ -122,6 +122,17 @@ footer small { grid-column: 1 / -1; margin-top: 80px; color: #aaa79e; }
 .resume-item h5 { font-size: 14px; margin: 0; }
 .resume-item time { font-size: 11px; border: 1px solid var(--lilac); height: fit-content; padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
 .resume-item ul { padding-left: 18px; color: var(--muted); line-height: 1.65; font-size: 14px; }
+.resume-subroles { margin-top: 32px; border-top: 1px solid var(--line); }
+.resume-subrole { padding: 28px 0; border-bottom: 1px solid var(--line); }
+.resume-subrole:last-child { padding-bottom: 0; border-bottom: 0; }
+.resume-subrole h6 { margin: 0; font-family: var(--serif); font-size: 20px; font-weight: 500; line-height: 1.25; }
+.subrole-head p { margin: 6px 0 0; color: var(--muted); font-size: 11px; letter-spacing: .04em; line-height: 1.5; }
+.resume-subrole ul { margin-block: 16px 20px; }
+.role-tools { display: grid; grid-template-columns: 132px 1fr; gap: 14px; align-items: start; margin-top: 20px; padding: 14px; border-radius: 6px; background: var(--cream); }
+.role-tools > strong { padding-top: 6px; color: var(--muted); font-size: 9px; line-height: 1.4; letter-spacing: .12em; text-transform: uppercase; }
+.tool-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+.tool-pills span { padding: 6px 9px; border: 1px solid var(--lilac); border-radius: 999px; background: var(--paper); font-size: 10px; line-height: 1.2; }
+.leadership-section { background: linear-gradient(90deg, transparent, rgba(185,146,228,.08), transparent); }
 .skill-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-cloud span { padding: 8px 11px; background: var(--cream); border-radius: 4px; font-size: 12px; }
 .hobby-section { padding: 90px 0; border-top: 1px solid var(--line); }
@@ -259,6 +270,8 @@ footer small { grid-column: 1 / -1; margin-top: 80px; color: #aaa79e; }
   .resume-top .resume-contact { text-align: left; margin-top: 20px; }
   .resume-item-head { display: block; }
   .resume-item time { display: inline-block; margin-top: 12px; }
+  .role-tools { grid-template-columns: 1fr; }
+  .role-tools > strong { padding-top: 0; }
   .hobby-section .hobby-inner { grid-template-columns: 1fr; gap: 20px; }
   .hobby-links, .gallery-intro { align-items: flex-start; flex-direction: column; }
   .gallery-shell { padding-bottom: 85px; }
