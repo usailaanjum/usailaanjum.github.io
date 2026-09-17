@@ -98,9 +98,9 @@ h2 { margin: 0; font-family: var(--serif); font-size: clamp(43px,5vw,72px); line
 .text-link:hover span { transform: translate(3px,-3px); }
 .resume-link { margin-top: 70px; }
 .home-projects { border-top: 1px solid var(--line); }
-.home-projects-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
-.home-projects-heading .section-heading { max-width: 660px; }
-.home-projects-heading .text-link { flex: none; margin-bottom: 8px; }
+.home-projects-heading { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: end; }
+.home-projects-heading .section-heading { grid-column: 2; max-width: 660px; text-align: center; }
+.home-projects-heading .text-link { grid-column: 3; justify-self: end; margin-bottom: 8px; }
 .home-projects-tagline { max-width: 620px; margin: 28px auto 0; color: var(--muted); font-size: 16px; line-height: 1.6; text-align: center; }
 .home-project-feature { display: grid; grid-template-columns: 180px 1fr auto; align-items: center; gap: 40px; min-height: 240px; margin-top: 56px; padding: 30px 40px; border: 1px solid var(--line); background: var(--cream); transition: border-color .25s, transform .25s; }
 .home-project-feature:hover { transform: translateY(-3px); border-color: var(--green); }
@@ -359,6 +359,9 @@ footer small { grid-column: 1 / -1; margin-top: 80px; color: #aaa79e; }
 }
 
 @media (max-width: 850px) {
+  .home-projects-heading { grid-template-columns: 1fr; justify-items: center; gap: 24px; }
+  .home-projects-heading .section-heading, .home-projects-heading .text-link { grid-column: 1; }
+  .home-projects-heading .text-link { justify-self: center; margin-bottom: 0; }
   .site-header { height: 70px; }
   .menu-toggle { display: grid; gap: 4px; background: none; border: 0; padding: 8px; }
   .menu-toggle span { width: 23px; height: 1px; background: var(--ink); transition: .2s; }
@@ -386,7 +389,7 @@ footer small { grid-column: 1 / -1; margin-top: 80px; color: #aaa79e; }
   .portrait-wrap { width: 72%; margin: auto; }
   .hero-copy h1 { font-size: 50px; letter-spacing: -3px; }
   .section-space { padding-block: 85px; }
-  .home-projects-heading { align-items: flex-start; flex-direction: column; }
+  .home-projects-heading { gap: 18px; }
   .home-project-feature { grid-template-columns: 86px 1fr; gap: 18px; min-height: 0; margin-top: 35px; padding: 22px; }
   .home-project-mark { width: 80px; height: 80px; border-radius: 14px; font-size: 54px; }
   .home-project-mark span { right: 16px; bottom: 11px; }
